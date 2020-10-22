@@ -17,12 +17,12 @@ steps:
     subscriptionId: '25b7412e-3e38-4d06-8889-6a35667fa656'
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'armdeployrg'
-    location: 'uksouth'
+    location: 'UK South'
     templateLocation: 'Linked artifact'
     csmFile: 'CreateWebApp/azuredeploy.json'
-    overrideParameters: '-projectName armdeploy -linkedTemplateUri https://raw.githubusercontent.com/Diemmar/armdeploy/master/CreateWebApp/linkedStorageAccount.json'
+    csmParametersFile: 'CreateWebApp/azuredeploy.parameters.json'
     deploymentMode: 'Incremental'
-    deploymentName: 'DeployPipelineTemplate'
+    deploymentName: 'armautodeploy'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
