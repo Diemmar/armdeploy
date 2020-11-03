@@ -13,10 +13,10 @@ steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: 'armdeploy-conn'
-    subscriptionId: '25b7412e-3e38-4d06-8889-6a35667fa656'
+    azureResourceManagerConnection: 'armDeployNew'
+    subscriptionId: '485d828b-d283-4732-bbe5-dbbcee12efe1'
     action: 'Create Or Update Resource Group'
-    resourceGroupName: 'armdeployrg'
+    resourceGroupName: 'armTemplateRG1'
     location: 'UK South'
     templateLocation: 'Linked artifact'
     csmFile: 'CreateWebApp/azuredeploy.json'
